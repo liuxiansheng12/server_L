@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    position: relative;
+    margin: 0 auto;
+    width: 564px;
+    height: 600px;
+}
+
+.zhu_ye_mian {
+    width: 360px;
+    height: 600px;
+    border: 1px solid;
+    position: relative;
+}
+
+
+.ti_shi {
+    position: absolute;
+    width: 202px;
+    height: 602px;
+    top: 0;
+    right: 0;
+    border: 1px solid;
+    padding-top: 80px;
+    box-sizing: border-box;
+}
+
+.ji_mu {
+    width: 100px;
+    margin: 0 auto;
+    height: 120px;
+    position: relative;
+}

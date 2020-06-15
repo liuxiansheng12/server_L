@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #app {
+            width: 800px;
+            margin-top: 10px;
+            padding: 30px;
+        }
+
+        input {
+            width: 630px;
+            height: 40px;
+            margin-left: 12px;
+            padding-left: 10px;
+        }
+        textarea {
+            width: 620px;
+            height: 300px;
+            margin-left: 12px;
+            padding: 10px;
+            line-height: 20px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100px;
+            background: #f0f;
+            height: 30px;
+            border: none;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .bition {
+            width: 600px;
+            height: 500px;
+            position: absolute;
+            top: 40px;
+            right: 10px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <form id="form">
+            <div>
+                <label for="title">标题: </label>
+                <input type="text" id="title">
+            </div>
+            <div style="margin-top: 20px; position: relative; height: 320px;">
+                <label for="article" style="position: absolute; top: 0;">文章: </label>
+                <textarea id="article" style="position: absolute; left: 40px;"></textarea>
+            </div>
+            <div style="margin-top: 20px;">
+                <label for="label">标签: </label>
+                <input type="text" id="label">
+            </div>
+            <button class="btn">提交</button>
+        </form>
+
+        <div class="bition"></div>
+    </div>
+    <script src="./base64.js"></script>
+    <script>
+        // 写文章的函数
+        async function setArticle(data) {
+            await fetch("/bok/setArticle", {
+                method: "post",
+                body: JSON.stringify(data)
+            })
+        }
+        
+        const btn = document.querySelector(".btn");
+        const form = document.querySelector("#form");
+
+        const bition = document.querySelector(".bition");
+        document.querySelector("textarea").oninput = function () {
+            bition.innerHTML = this.value;
+        }
+
+
+        btn.onclick = function (e) {
+            e.preventDefault();
+            const data = {
+                title: form.title.value.trim(),
+                article: form.article.value.trim(),
+                label: form.label.value.trim()
+            }
+            // 把涉及到的所有图片全部转换成base64位编码
+            // 当所有的都转换完成后，在向服务端发送数据，即执行回调函数
+            base64(data.article, (article) => {
+                data.article = article;
+                setArticle(data);
+            } );
+        }
+
+        
+    </script>
+</body>
+</html>

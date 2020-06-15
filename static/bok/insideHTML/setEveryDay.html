@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #app {
+            width: 800px;
+            margin: 0 auto;
+            margin-top: 10px;
+
+            padding: 30px;
+        }
+
+        input {
+            width: 630px;
+            height: 40px;
+            margin-left: 12px;
+            padding-left: 10px;
+        }
+        textarea {
+            width: 620px;
+            height: 300px;
+            margin-left: 12px;
+            padding: 10px;
+            line-height: 20px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100px;
+            background: #f0f;
+            height: 30px;
+            border: none;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <form id="form">
+            <div style="position: relative; height: 320px;">
+                <label for="everyDay" style="position: absolute; top: 0;">语句: </label>
+                <textarea id="everyDay" style="position: absolute; left: 40px;"></textarea>
+            </div>
+            <div style="margin-top: 20px;">
+                <label for="authorName">作者: </label>
+                <input type="text" id="authorName">
+            </div>
+            <button class="btn">提交</button>
+        </form>
+    </div>
+    <script>
+        // 写文章的函数
+        async function setEveryDay(data) {
+            await fetch("/bok/setEveryDay", {
+                method: "post",
+                body: JSON.stringify(data)
+            })
+        }
+        
+        const btn = document.querySelector(".btn");
+        const form = document.querySelector("#form");
+
+        btn.onclick = function (e) {
+            e.preventDefault();
+            const data = {
+                everyDay: form.everyDay.value.trim(),
+                authorName: form.authorName.value.trim()
+            }
+            console.log(data);
+            setEveryDay(data);
+        }
+    </script>
+</body>
+</html>

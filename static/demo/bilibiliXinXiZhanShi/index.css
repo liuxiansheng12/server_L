@@ -1,0 +1,159 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+#app {
+    width: 940px;
+    height: 260px;
+    margin: 50px auto;
+
+    position: relative;
+}
+
+#app .nei {
+    width: 100;
+    height: 100%;
+    background: #eee;
+
+    
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
+#app .button .q,
+#app .button .h{
+    width: 30px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    cursor: pointer;
+}
+#app .button .h {
+    right: 0;
+}
+
+#app .button .q::after,
+#app .button .q::before,
+#app .button .h::after,
+#app .button .h::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -1px 0 0 -5px;
+}
+#app .button .q::after {
+    transform: translateY(3px) rotate(45deg);
+}
+#app .button .q::before {
+    transform: translateY(-3px) rotate(-45deg);
+}
+#app .button .h::after {
+    transform: translateY(-3px) rotate(45deg);
+}
+#app .button .h::before {
+    transform: translateY(3px) rotate(-45deg);
+}
+
+
+
+#app .info {
+    width: 220px;
+    height: 120px;
+    overflow: hidden;
+}
+
+#app .info .zhu {
+    position: relative;
+}
+
+#app .info .zhu,
+#app .info .zhu .img, 
+#app .info .zhu .img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+#app .info .zhu .content{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 78px;
+    left: 0;
+
+    background: rgba(0, 0, 0, 0.3);
+
+    padding: 16px 8px 8px 8px;
+    box-sizing: border-box;
+
+    transition: all 0.2s linear;
+}
+
+#app .info:hover .zhu .content{
+    top: 0;
+}
+#app .info:hover .zhu .content .guan{
+    white-space: pre-wrap;
+}
+
+#app .info .zhu .content p {
+    color: #e0e0e0;
+}
+#app .info .zhu .content .guan {
+    font-size: 14px;
+    padding-bottom: 16px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+#app .info .zhu .content .xiao {
+    position: absolute;
+    bottom: 8px;
+}
+
+#app .info .zhu .content .xiao .miao,
+#app .info .zhu .content .xiao .dian {
+    font-size: 12px;
+    
+    height: 22px;
+    line-height: 22px;
+}
+
+
+#app .info .zhu .content .but {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    color: #e0e0e0;
+    font-size: 14px;
+    border: 1px solid #e0e0e0;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
