@@ -2,7 +2,7 @@
 const fs = require("fs");
 const get = new Map();
 const post = new Map();
-const webFileAggre = fs.readdirSync("./web");
+const webFileAggre = fs.readdirSync("./Web");
 
 function createNynamicAggre(arr, fileName) {
     for(let i = 0; i < arr.length; i ++) {
