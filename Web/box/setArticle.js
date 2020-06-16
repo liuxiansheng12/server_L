@@ -1,4 +1,4 @@
-const service = require("../../service/bok/setArticleSer");
+const service = require("../../Service/bok/setArticleSer");
 const tool = require("../tool");
 const post = new Map();
 function setArticle(request, response) {
