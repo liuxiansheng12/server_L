@@ -5,15 +5,17 @@ const aggregate = {
             id: 1,
             imgSrc: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586421254304&di=39fa0b365c0e6c906b8d422c7cb722dc&imgtype=0&src=http%3A%2F%2F00.minipic.eastday.com%2F20170322%2F20170322101109_43103656e73a2038299ec17c648fc6c6_15.jpeg",
             title: "QQ音乐播放器",
-            intreduce: "注意: MV全屏后，需要按两下Esc键退出全屏状态",
-            href: "/project/kuwo"
+            intreduce: "无介绍",
+            href: "/project/kuwo",
+            careful: "MV全屏后，需要按两下Esc键退出全屏状态"
         },
         {
             id: 2,
             imgSrc: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586421254304&di=39fa0b365c0e6c906b8d422c7cb722dc&imgtype=0&src=http%3A%2F%2F00.minipic.eastday.com%2F20170322%2F20170322101109_43103656e73a2038299ec17c648fc6c6_15.jpeg",
             title: "QQ音乐播放器——带频谱显示",
-            intreduce: "注意: 歌曲加载缓慢，只有播放标记，从音乐加载中，变成播放音乐，此时音乐加载完成，可以正常播放了。否则无法播放",
-            href: "/project/music_spectrum"
+            intreduce: "无介绍",
+            href: "/project/music_spectrum",
+            careful: "歌曲加载缓慢，只有播放标记，从音乐加载中，变成播放音乐，此时音乐加载完成，可以正常播放了。否则无法播放"
         },
     ],
     game: [

@@ -5,7 +5,8 @@ const captcha = require("svg-captcha");
 
 function writeTool(data) {
     let da = null;
-    if( typeof data === "string") {
+    if(!data) da = "{}";
+    else if( typeof data === "string") {
         da = data;
     }
     else if( typeof data === "object" ) {
