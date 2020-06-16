@@ -50,6 +50,16 @@
             border: 1px solid;
             overflow: auto;
         }
+
+        .password {
+            position: absolute;
+            bottom: 119px;
+        }
+        .password input {
+            height: 20px;
+            width: 200px;
+        }
+
     </style>
 </head>
 <body>
@@ -68,6 +78,10 @@
                 <input type="text" id="label">
             </div>
             <button class="btn">提交</button>
+            <div class="password">
+                密码:
+                <input type="text" class="pass">
+            </div>
         </form>
 
         <div class="bition"></div>
@@ -84,6 +98,7 @@
         
         const btn = document.querySelector(".btn");
         const form = document.querySelector("#form");
+        const password = document.querySelector(".pass");
 
         const bition = document.querySelector(".bition");
         document.querySelector("textarea").oninput = function () {
@@ -102,7 +117,12 @@
             // 当所有的都转换完成后，在向服务端发送数据，即执行回调函数
             base64(data.article, (article) => {
                 data.article = article;
-                setArticle(data);
+                if( password.value !== "19960603.0") {
+                    alert("密码错误，无法发布");
+                }
+                else {
+                    setArticle(data);
+                }
             } );
         }
 

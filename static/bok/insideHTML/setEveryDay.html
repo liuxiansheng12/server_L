@@ -43,6 +43,15 @@
             margin-top: 20px;
         }
 
+        .password {
+            position: absolute;
+            bottom: 184px;
+        }
+        .password input {
+            height: 20px;
+            width: 200px;
+        }
+
 
     </style>
 </head>
@@ -58,6 +67,10 @@
                 <input type="text" id="authorName">
             </div>
             <button class="btn">提交</button>
+            <div class="password">
+                密码:
+                <input type="text" class="pass">
+            </div>
         </form>
     </div>
     <script>
@@ -71,6 +84,8 @@
         
         const btn = document.querySelector(".btn");
         const form = document.querySelector("#form");
+        const password = document.querySelector(".pass");
+
 
         btn.onclick = function (e) {
             e.preventDefault();
@@ -78,8 +93,12 @@
                 everyDay: form.everyDay.value.trim(),
                 authorName: form.authorName.value.trim()
             }
-            console.log(data);
-            setEveryDay(data);
+            if( password.value !== "19960603.0") {
+                alert("密码错误，无法发布");
+            }
+            else {
+                setEveryDay(data);
+            }
         }
     </script>
 </body>
