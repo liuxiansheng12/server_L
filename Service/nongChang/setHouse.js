@@ -6,7 +6,8 @@ function setHouse(request, response, callBack) {
 
     request.on("data", (data) => {
         const pathData = JSON.parse(data);
-        mysqlSetHouse(pathData.name, pathData.house, callBack);
+        const house = JSON.stringify(pathData.house);
+        mysqlSetHouse(pathData.name, house, callBack);
     })
     
 }
