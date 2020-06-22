@@ -22,37 +22,65 @@ const aggregate = {
         {
             id: 1,
             imgSrc: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586421254304&di=39fa0b365c0e6c906b8d422c7cb722dc&imgtype=0&src=http%3A%2F%2F00.minipic.eastday.com%2F20170322%2F20170322101109_43103656e73a2038299ec17c648fc6c6_15.jpeg",
-            title: "俄罗斯方块",
-            intreduce: "左右键，移动俄罗斯方块，下键加速降落。空格切换形状",
-            href: "/game/tetris"
+            title: "简易版农场",
+            intreduce: "可以在商城购买种子，可以在仓库出售种子，加入了金币操作",
+            href: "/game/nongChang"
         },
         {
             id: 2,
+            imgSrc: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586421254304&di=39fa0b365c0e6c906b8d422c7cb722dc&imgtype=0&src=http%3A%2F%2F00.minipic.eastday.com%2F20170322%2F20170322101109_43103656e73a2038299ec17c648fc6c6_15.jpeg",
+            title: "五子棋",
+            intreduce: "共有单机、双人、AI三种玩法",
+            href: "/game/gobang"
+        },
+        {
+            id: 3,
+            imgSrc: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586421254304&di=39fa0b365c0e6c906b8d422c7cb722dc&imgtype=0&src=http%3A%2F%2F00.minipic.eastday.com%2F20170322%2F20170322101109_43103656e73a2038299ec17c648fc6c6_15.jpeg",
+            title: "贪吃蛇",
+            intreduce: "按上下左右键进行蛇的移动，可以选关，可以选择是否出动AI蛇，出动几条",
+            href: "/game/snake"
+        },
+        {
+            id: 4,
             imgSrc: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586421254304&di=39fa0b365c0e6c906b8d422c7cb722dc&imgtype=0&src=http%3A%2F%2F00.minipic.eastday.com%2F20170322%2F20170322101109_43103656e73a2038299ec17c648fc6c6_15.jpeg",
             title: "斗地主",
             intreduce: "必须三个人，才会开局进行游戏。负责就会陷入等待过程中",
             href: "/game/puk"
         },
         {
-            id: 3,
+            id: 5,
             imgSrc: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586421254304&di=39fa0b365c0e6c906b8d422c7cb722dc&imgtype=0&src=http%3A%2F%2F00.minipic.eastday.com%2F20170322%2F20170322101109_43103656e73a2038299ec17c648fc6c6_15.jpeg",
-            title: "推箱子",
-            intreduce: "按上下左右键进行人物的移动",
-            href: "/game/sokoban"
+            title: "俄罗斯方块",
+            intreduce: "左右键，移动俄罗斯方块，下键加速降落。空格切换形状",
+            href: "/game/tetris"
         },
         {
-            id: 4,
+            id: 6,
             imgSrc: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586421254304&di=39fa0b365c0e6c906b8d422c7cb722dc&imgtype=0&src=http%3A%2F%2F00.minipic.eastday.com%2F20170322%2F20170322101109_43103656e73a2038299ec17c648fc6c6_15.jpeg",
             title: "消消乐",
             intreduce: "无介绍",
             href: "/game/xiaoXiaoLe"
         },
         {
-            id: 4,
+            id: 7,
             imgSrc: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586421254304&di=39fa0b365c0e6c906b8d422c7cb722dc&imgtype=0&src=http%3A%2F%2F00.minipic.eastday.com%2F20170322%2F20170322101109_43103656e73a2038299ec17c648fc6c6_15.jpeg",
-            title: "五子棋",
-            intreduce: "共有单机、双人、AI三种玩法",
-            href: "/game/gobang"
+            title: "象棋",
+            intreduce: "只有单机玩法，即一个页面两个人走棋",
+            href: "/game/chess"
+        },
+        {
+            id: 8,
+            imgSrc: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586421254304&di=39fa0b365c0e6c906b8d422c7cb722dc&imgtype=0&src=http%3A%2F%2F00.minipic.eastday.com%2F20170322%2F20170322101109_43103656e73a2038299ec17c648fc6c6_15.jpeg",
+            title: "推箱子",
+            intreduce: "按上下左右键进行人物的移动",
+            href: "/game/sokoban"
+        },
+        {
+            id: 9,
+            imgSrc: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586421254304&di=39fa0b365c0e6c906b8d422c7cb722dc&imgtype=0&src=http%3A%2F%2F00.minipic.eastday.com%2F20170322%2F20170322101109_43103656e73a2038299ec17c648fc6c6_15.jpeg",
+            title: "扫雷",
+            intreduce: "无介绍",
+            href: "/game/mine"
         }
     ],
     demo: [

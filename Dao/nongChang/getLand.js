@@ -2,7 +2,7 @@ const connect = require("../connectMySQL");
 
 // 根据name进行获取所有土地的信息
 function getLand(name, callBack) {
-    const instryction = 'select land from xinXi where name = ?';
+    const instryction = 'select land from xinxi where name = ?';
     const arr = [name];
 
     const connection = connect("nongchang");

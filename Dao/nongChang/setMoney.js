@@ -2,7 +2,7 @@ const connect = require("../connectMySQL");
 
 // 根据name进行获取所有土地的信息
 function setMoney(name, money, callBack) {
-    const instryction = "update xinXi set money = ? where name = ?";
+    const instryction = "update xinxi set money = ? where name = ?";
     const arr = [money, name];
 
     const connection = connect("nongchang");

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #app {
+            height: 100%;
+        }
+        .content {
+            width: 521px;
+            height: 569px;
+            margin: 10px auto;
+            background: url("./img/qiPan.jpg") no-repeat;
+            background-size: 100% 100%;
+
+            box-sizing: border-box;
+            padding-left: 16px;
+            padding-top: 14px;
+        }
+        .content > div {
+            width: 55px;
+            height: 55px;
+            box-sizing: border-box;
+            float: left;
+            cursor: pointer;
+            
+            transform: scale(0.8);
+            overflow: hidden;
+        }
+        .content > div.active {
+            border: 2px solid #f0f;
+        }
+
+        .content > div > .qiZi {
+            width: 55px;
+            height: 55px;
+            line-height: 55px;
+            text-align: center;
+
+            box-sizing: border-box;
+            border-radius: 50%;
+
+            font-size: 30px;
+            font-weight: 700;
+            background-color: #fafff0;
+        }
+        .content > div.active > .qiZi {
+            width: 51px;
+            height: 51px;
+            line-height: 51px;
+        }
+
+        .boo {
+            font-size: 30px;
+            font-weight: 700;
+            position: absolute;
+            left: 200px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="content"></div>
+        <div class="boo">红方走</div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>

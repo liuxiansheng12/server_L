@@ -3,7 +3,7 @@ const connect = require("../connectMySQL");
 
 // 根据name进行获取所有土地的信息
 function getHouse(name, callBack) {
-    const instryction = 'select house from xinXi where name = ?';
+    const instryction = 'select house from xinxi where name = ?';
     const arr = [name];
 
     const connection = connect("nongchang");

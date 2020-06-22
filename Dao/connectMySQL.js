@@ -12,25 +12,3 @@ function connection(mysql = "bok") {
 module.exports = connection;
 
 
-// const req = require("request");
-
-
-// module.exports = function () {
-
-//     return {
-//         connect() {},
-//         end() {},
-//         query(str, arr, callBack) {
-//             req({
-//                 url: "http://127.0.0.1:12345/operation",
-//                 method: "POST",
-//                 body: JSON.stringify({
-//                     zhi: str,
-//                     arr: arr
-//                 })
-//             }, (err, resq, body) => {
-//                 if(!err) callBack( JSON.parse(body) );
-//             })
-//         }
-//     }
-// }
