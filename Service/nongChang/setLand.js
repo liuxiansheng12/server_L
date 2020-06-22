@@ -6,7 +6,8 @@ const mysqlAddUserInfor = require("../../Dao/nongChang/addUserInfor");
 
 function setLand(request, response, callBack) {
 
-    request.on("data", (data) => {
+    request.on("data", (d) => {
+        const data = d.toString();
         const pathData = JSON.parse(data);
         // 首先获取到所有的土地数据
         mysqlGetLand(pathData.name, (data) => {
