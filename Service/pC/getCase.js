@@ -20,13 +20,6 @@ const aggregate = {
     ],
     game: [
         {
-            id: 1,
-            imgSrc: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586421254304&di=39fa0b365c0e6c906b8d422c7cb722dc&imgtype=0&src=http%3A%2F%2F00.minipic.eastday.com%2F20170322%2F20170322101109_43103656e73a2038299ec17c648fc6c6_15.jpeg",
-            title: "简易版农场",
-            intreduce: "可以在商城购买种子，可以在仓库出售种子，加入了金币操作",
-            href: "/game/nongChang"
-        },
-        {
             id: 2,
             imgSrc: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586421254304&di=39fa0b365c0e6c906b8d422c7cb722dc&imgtype=0&src=http%3A%2F%2F00.minipic.eastday.com%2F20170322%2F20170322101109_43103656e73a2038299ec17c648fc6c6_15.jpeg",
             title: "五子棋",
